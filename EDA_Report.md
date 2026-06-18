@@ -1,6 +1,6 @@
 # Exploratory Data Analysis Report
 
-Rows: 100 Columns: 4
+Rows: 100 Columns: 8
 
 ## Columns
 
