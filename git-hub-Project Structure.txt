@@ -1,0 +1,26 @@
+customer-churn-project/
+
+│
+├── data/
+│   └── telco_churn.xlsx
+│
+├── notebooks/
+│   ├── EDA.ipynb
+│   ├── Churn_Model.ipynb
+│   └── LTV_Model.ipynb
+│
+├── sql/
+│   └── schema.sql
+│
+├── api/
+│   └── main.py
+│
+├── dashboard/
+│
+├── models/
+│   ├── churn.pkl
+│   └── ltv.pkl
+│
+├── requirements.txt
+│
+└── README.md
