@@ -1,4 +1,4 @@
-# Load Dataset
+# Load Dataset new data
 import pandas as pd
 df=pd.read_excel(r"C:\Users\abc\Documents\Customer Churn Prediction & Lifetime Value (1) cleaned dataset.xlsx")
 print(df)
