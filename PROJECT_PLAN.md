@@ -1,5 +1,5 @@
 # Telco Customer Churn Prediction & LTV Analytics System
-## Project Plan Document
+
 
 ---
 
