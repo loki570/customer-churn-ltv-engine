@@ -481,4 +481,6 @@ CREATE INDEX idx_predictions_timestamp ON predictions_log(prediction_timestamp);
 - Comprehensive logging for debugging
 - Regular backup of models and data
 
+## Live Dashboard
+http://localhost:3000/public/dashboard/6e2000fe-f239-448f-a363-e97525602d66
 
