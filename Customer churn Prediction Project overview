@@ -1,0 +1,357 @@
+# Customer Churn Prediction & Lifetime Value (LTV) Engine
+
+## Project Summary
+
+Customer retention is one of the most critical challenges faced by telecommunications and subscription-based businesses. Acquiring new customers is significantly more expensive than retaining existing ones, making customer churn prediction an important business problem.
+
+The **Customer Churn Prediction & Lifetime Value (LTV) Engine** is an end-to-end data analytics and machine learning project developed to predict customer churn, estimate Customer Lifetime Value (LTV), and provide actionable business insights. The project combines data preprocessing, exploratory data analysis (EDA), machine learning, and interactive dashboard visualization to support data-driven business decisions.
+
+Using historical customer data, the system identifies customers who are at high risk of leaving the company and estimates their future business value. These insights help organizations improve customer retention strategies, optimize marketing campaigns, and increase overall profitability.
+
+
+# Business Problem
+
+Telecommunication companies experience customer loss due to contract changes, pricing, service quality, and customer satisfaction issues. Without identifying customers who are likely to leave, businesses lose significant revenue every year.
+
+This project helps businesses answer important questions such as:
+
+- Which customers are most likely to churn?
+- Which customer attributes influence churn the most?
+- Which customers have the highest lifetime value?
+- How can customer retention strategies be improved using data?
+
+
+# Project Objectives
+
+The primary objectives of this project are:
+
+- Clean and preprocess customer data
+- Perform Exploratory Data Analysis (EDA)
+- Identify important factors contributing to customer churn
+- Build machine learning models to predict churn
+- Estimate Customer Lifetime Value (LTV)
+- Visualize business insights using interactive dashboards
+- Support data-driven customer retention strategies
+
+
+# Dataset Information
+
+**Dataset:** IBM Telco Customer Churn Dataset
+
+The dataset contains customer demographic information, account details, subscription services, billing information, and churn status.
+
+### Dataset Features
+
+- Customer ID
+- Gender
+- Senior Citizen
+- Partner
+- Dependents
+- Tenure
+- Phone Service
+- Internet Service
+- Online Security
+- Online Backup
+- Device Protection
+- Tech Support
+- Streaming TV
+- Streaming Movies
+- Contract Type
+- Paperless Billing
+- Payment Method
+- Monthly Charges
+- Total Charges
+- Churn
+
+
+# Tools & Technologies
+
+### Programming Language
+
+- Python
+
+### Database
+
+- PostgreSQL
+- SQL
+
+### Python Libraries
+
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- SHAP
+
+### Visualization
+
+- Metabase
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+# Project Workflow
+
+The project was completed through the following stages:
+
+### 1. Data Collection
+
+Imported the IBM Telco Customer Churn dataset for analysis.
+
+### 2. Data Cleaning
+
+- Removed duplicate records
+- Handled missing values
+- Converted incorrect data types
+- Treated inconsistent values
+- Prepared clean data for analysis
+
+### 3. Exploratory Data Analysis (EDA)
+
+Performed detailed data analysis to identify customer behaviour and business patterns through different visualizations.
+
+Analysis included:
+
+- Churn Distribution
+- Contract Analysis
+- Internet Service Analysis
+- Payment Method Analysis
+- Monthly Charges Distribution
+- Customer Segmentation
+- Correlation Analysis
+
+### 4. Feature Engineering
+
+Prepared features for machine learning by:
+
+- Encoding categorical variables
+- Feature scaling
+- Creating meaningful variables
+- Selecting important features
+
+### 5. Machine Learning
+
+Developed classification models to predict customer churn.
+
+Models evaluated include:
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+Performance was evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC
+
+### 6. Customer Lifetime Value (LTV)
+
+Estimated the future value of customers based on spending behaviour and churn probability.
+
+### 7. Dashboard Development
+
+Created interactive dashboards using Metabase for business users to monitor customer churn and business performance.
+
+---
+
+# Dashboard Visualizations
+
+The dashboard includes the following visualizations:
+
+- Global Churn Overview
+- Contract Analysis
+- Internet Service Analysis
+- Payment Method Analysis
+- Monthly Charges Distribution
+- Customer Segmentation
+- Correlation Heatmap
+
+---
+
+# Key Business Insights
+
+The project identified several important business insights:
+
+- Customers with month-to-month contracts are more likely to churn.
+- Customers with higher monthly charges have a greater probability of leaving.
+- Long-term contract customers demonstrate significantly lower churn rates.
+- Electronic Check is one of the most common payment methods among churned customers.
+- Customer tenure is one of the strongest indicators of churn.
+- Customers with higher predicted Lifetime Value should be prioritised for retention campaigns.
+
+---
+
+# Business Impact
+
+The solution enables businesses to:
+
+- Identify high-risk customers before they churn
+- Improve customer retention strategies
+- Reduce customer acquisition costs
+- Increase marketing effectiveness
+- Improve customer segmentation
+- Support data-driven decision making
+
+---
+
+# Project Structure
+
+```
+customer-churn-ltv-engine/
+
+│── README.md
+│── Analysis.ipynb
+│── src/
+│── data/
+│── dashboard/
+│── reports/
+│── requirements.txt
+```
+
+# Future Enhancements
+
+Future improvements for this project include:
+
+- Real-time churn prediction
+- Cloud deployment
+- Automated model retraining
+- Interactive web application
+- Advanced ensemble learning models
+- Customer recommendation system
+
+
+# Conclusion
+
+The Customer Churn Prediction & Lifetime Value (LTV) Engine demonstrates how data analytics and machine learning can be applied to solve real-world business problems. By combining predictive modelling, customer segmentation, and business intelligence dashboards, the project provides valuable insights that help organizations improve customer retention, maximize customer lifetime value, and make informed strategic decisions.
+
+                                             Architecture
+                                       
+                                       CUSTOMER CHURN PREDICTION &
+                                   LIFETIME VALUE (LTV) ENGINE
+
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                              📂 DATA SOURCE                                               │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│                    IBM Telco Customer Churn Dataset                                       │
+│                    • 7,043 Customer Records                                               │
+│                    • 21 Customer Features                                                 │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                        🧹 DATA PREPROCESSING & CLEANING                                   │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ ✔ Data Import (Pandas)                                                                    │
+│ ✔ Missing Value Handling                                                                  │
+│ ✔ Duplicate Removal                                                                       │
+│ ✔ Data Type Conversion                                                                    │
+│ ✔ Feature Encoding                                                                        │
+│ ✔ Feature Engineering                                                                     │
+│ ✔ Data Validation                                                                         │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                     📊 EXPLORATORY DATA ANALYSIS (EDA)                                   │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ Dataset Overview                                                                          │
+│ • Shape • Data Types • Summary Statistics                                                 │
+│                                                                                           │
+│ Univariate Analysis                                                                       │
+│ • Churn Distribution                                                                      │
+│ • Monthly Charges Distribution                                                            │
+│ • Tenure Distribution                                                                     │
+│                                                                                           │
+│ Bivariate Analysis                                                                        │
+│ • Contract vs Churn                                                                       │
+│ • Internet Service vs Churn                                                               │
+│ • Payment Method vs Churn                                                                 │
+│ • Tech Support vs Churn                                                                   │
+│ • Monthly Charges vs Churn                                                                │
+│ • Tenure vs Churn                                                                         │
+│                                                                                           │
+│ Correlation Analysis                                                                      │
+│ • Correlation Heatmap                                                                     │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                           🗄️ POSTGRESQL DATABASE                                         │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ • Customer Data                                                                           │
+│ • Processed Dataset                                                                       │
+│ • Prediction Logs                                                                         │
+│ • Model Performance Metrics                                                               │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                         🤖 MACHINE LEARNING LAYER                                         │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ Customer Churn Prediction Models                                                          │
+│ • Logistic Regression                                                                     │
+│ • Random Forest                                                                           │
+│ • XGBoost                                                                                 │
+│                                                                                           │
+│ Customer Lifetime Value Prediction                                                        │
+│ • Linear Regression                                                                       │
+│                                                                                           │
+│ Model Evaluation                                                                          │
+│ • Accuracy • Precision • Recall • F1 Score • ROC-AUC                                     │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                         🔍 MODEL EXPLAINABILITY (SHAP)                                   │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ • Feature Importance                                                                      │
+│ • Customer Churn Drivers                                                                  │
+│ • Prediction Interpretation                                                               │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                            🚀 FASTAPI DEPLOYMENT                                          │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET    /                     → Home Endpoint                                              │
+│ POST   /predict              → Single Customer LTV Prediction                             │
+│ POST   /batch_predict        → Batch Customer LTV Prediction                              │
+│                                                                                           │
+│ ✔ Pydantic Validation                                                                     │
+│ ✔ Joblib Model Loading                                                                    │
+│ ✔ JSON Response                                                                           │
+│ ✔ Swagger UI Testing                                                                      │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                      📈 METABASE INTERACTIVE DASHBOARD                                    │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ 📊 Global Churn Risk                                                                      │
+│ 🌐 Internet Service Analysis                                                              │
+│ 💳 Payment Method Analysis                                                                │
+│ 💰 Monthly Charges Distribution                                                           │
+│ 📑 Contract Analysis                                                                      │
+│ 🔎 Interactive Dashboard Filters                                                         │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+                                           │
+                                           ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                          💼 BUSINESS DECISION SUPPORT                                     │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│ ✔ Customer Retention Strategy                                                             │
+│ ✔ Churn Risk Identification                                                               │
+│ ✔ Customer Lifetime Value Estimation                                                      │
+│ ✔ Business Intelligence                                                                   │
+│ ✔ Data-Driven Decision Making                                                             │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+
